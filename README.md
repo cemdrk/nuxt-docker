@@ -1,5 +1,11 @@
 # Nuxt w/ Tailwind Docker
 
+## Clone the project
+
+```
+  npx degit https://github.com/cemdrk/nuxt-docker myapp
+```
+
 ## Development Server
 
 ### Start
