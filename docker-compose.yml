@@ -1,0 +1,17 @@
+version: "3"
+
+services:
+  app:
+    build: .
+    ports:
+      - 3000:3000
+      - 24678:24678
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+    volumes:
+      - ./src:/app
+      - nodemodules:/app/node_modules
+      - nuxt:/app/.nuxt
+volumes:
+  nodemodules:
+  nuxt:
