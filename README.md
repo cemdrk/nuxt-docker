@@ -6,13 +6,13 @@
   npx degit https://github.com/cemdrk/nuxt-docker myapp
 ```
 
-## Development Server
-
-### Start
+## Start Development Server
 
 ```bash
 docker compose up -d
 ```
+
+Access at http://localhost:3000/
 
 ### Get Logs
 
@@ -20,7 +20,12 @@ docker compose up -d
 docker compose logs -f app
 ```
 
-### Attach
+Alternatively run
+```bash
+make up
+```
+
+### Attach to shell
 
 ```bash
 docker compose exec app bash
@@ -29,5 +34,10 @@ docker compose exec app bash
 ### Clean
 
 ```bash
-docker compose down --volumes --rmi local
+docker compose down --volumes --rmi local --remove-orphans
+```
+
+Alternatively run
+```
+make down
 ```
